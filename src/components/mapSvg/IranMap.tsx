@@ -46,7 +46,7 @@ const IranMap: React.FC<IranMapWrapperProps> = ({
     const polygons = svg.querySelectorAll('polygon')
     const paths = svg.querySelectorAll('path')
 
-    const values = Object.values(mapData)
+    const values = Object.values(mapData).map((item) => item.quantity)
     //@ts-ignore
     const min = Math.min(...values)
     const max = Math.max(...values)
@@ -60,7 +60,7 @@ const IranMap: React.FC<IranMapWrapperProps> = ({
       )?.provinceFaName
 
       if (title) {
-        const count = mapData[title.trim()]
+        const count = mapData[title.trim()].quantity
         if (count === 0) {
           element.style.fill = deactiveProvinceColor
         } else {

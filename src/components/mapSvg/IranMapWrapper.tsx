@@ -22,7 +22,7 @@ const IranMapWrapper: React.FC<MapProps> = ({
           data[
             //@ts-ignore
             provinces.find((item: any) => item.provinceFaName === provinceName)?.provinceName
-          ]
+          ].value
         }
         ${tooltipTitle && `<span>${tooltipTitle}</span>`}
       </h3>

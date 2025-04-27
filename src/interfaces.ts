@@ -10,7 +10,7 @@ export interface provinceType {
 }
 
 export interface mapDataType {
-  [key: string]: number
+  [key: string]: { quantity: number; value?: string }
 }
 
 export interface IranMapWrapperProps {
